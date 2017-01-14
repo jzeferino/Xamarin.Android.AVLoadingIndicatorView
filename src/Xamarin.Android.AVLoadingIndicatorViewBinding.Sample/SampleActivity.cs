@@ -38,8 +38,7 @@ namespace Xamarin.Android.AVLoadingIndicatorViewBinding.Sample
             "TriangleSkewSpinIndicator",
             "PacmanIndicator",
             "BallGridBeatIndicator",
-            "SemiCircleSpinIndicator",
-            "com.wang.avi.sample.MyCustomIndicator"
+            "SemiCircleSpinIndicator"
         };
 
         private RecyclerView _recycler;
