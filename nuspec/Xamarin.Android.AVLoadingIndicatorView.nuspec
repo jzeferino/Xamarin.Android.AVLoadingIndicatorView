@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Xamarin.Android.AVLoadingIndicatorView</id>
+    <version>$version$</version>
+    <title>Xamarin.Android.AVLoadingIndicatorView</title>
+    <authors>jzeferino</authors>
+    <licenseUrl>https://github.com/jzeferino/Xamarin.Android.AVLoadingIndicatorView/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jzeferino/Xamarin.Android.AVLoadingIndicatorView</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>TAVLoadingIndicatorView is a collection of nice loading animations for Android.</description>    
+    <tags>xamarin, android, loading</tags>
+  </metadata>
+  <files>
+    <!--Xamarin.Android-->
+    <file src="src/Xamarin.Android.AVLoadingIndicatorViewBinding/bin/Release/Xamarin.Android.AVLoadingIndicatorViewBinding.dll" target="lib/MonoAndroid403/Xamarin.Android.AVLoadingIndicatorViewBinding.dll" />
+  </files>
+</package>

@@ -1,0 +1,16 @@
+version: '2.1.3'
+branches:
+  only:
+  - develop
+  - master
+build_script:
+- ps: .\build.ps1
+
+test: off
+
+artifacts:
+- path: ./artifacts/*.nupkg
+  name: nugetpackage  
+
+cache:
+- tools -> build.cake, tools\packages.config # Cache \tools until build.cake and/or packages.config change
