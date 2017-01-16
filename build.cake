@@ -1,3 +1,5 @@
+#addin Cake.SemVer
+
 // Enviroment
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 var isRunningOnWindows = IsRunningOnWindows();
@@ -11,7 +13,7 @@ var solutionFile = new FilePath("Xamarin.Android.AVLoadingIndicatorViewBinding.s
 var artifactsDirectory = new DirectoryPath("artifacts");
 
 // Versioning.
-var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "9.9.9");
+var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "9.9.9-build9");
 
 Setup((context) =>
 {
@@ -52,11 +54,14 @@ Task ("NuGet")
 	.IsDependentOn ("Build")
 	.Does (() =>
 	{
+		var sv = ParseSemVer (version);
+		var nugetVersion = CreateSemVer (sv.Major, sv.Minor, sv.Patch).ToString();
+		
 		NuGetPack ("./nuspec/Xamarin.Android.AVLoadingIndicatorView.nuspec", 
 			new NuGetPackSettings 
 				{ 
-					Version = version,
-					Verbosity = NuGetVerbosity.Detailed,
+					Version = nugetVersion,
+					Verbosity = NuGetVerbosity.Normal,
 					OutputDirectory = artifactsDirectory,
 					BasePath = "./",
 					ArgumentCustomization = args => args.Append("-NoDefaultExcludes")		
