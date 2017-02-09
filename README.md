@@ -136,5 +136,5 @@ As seen above in the **Demo**, the indicators are as follows:
  * `BallGridBeatIndicator`
  * `SemiCircleSpinIndicator`
  
- ### License
-Under Apache, see LICENSE file.
+### License
+[MIT Licence](LICENSE) 
