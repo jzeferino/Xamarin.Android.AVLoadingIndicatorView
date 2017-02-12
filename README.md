@@ -32,6 +32,7 @@ Simple Loading
 
 ```xml
 <com.wang.avi.AVLoadingIndicatorView
+    android:id="@+id/avi"
     android:layout_width="wrap_content"  
     android:layout_height="wrap_content"
     app:indicatorName="BallPulseIndicator" />
@@ -54,6 +55,15 @@ Advanced Loading
 
 Show or hide the progress. (start showing by default)
 ```c#
+
+protected override void OnCreate(Bundle savedInstanceState)
+{
+    base.OnCreate(savedInstanceState);
+
+    avi = FindViewById<AVLoadingIndicatorView>(Resource.Id.avi);
+    avi.Show():
+}  
+
 void ShowLoading()
 {
     avi.Show();
