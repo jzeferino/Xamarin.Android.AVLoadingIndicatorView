@@ -16,7 +16,7 @@ AVLoadingIndicatorView is a collection of nice loading animations for Android.
 
 ### Step 1
 
-Instal NuGet [package](https://www.nuget.org/packages/Xamarin.Android.AVLoadingIndicatorView/).
+Install NuGet [package](https://www.nuget.org/packages/Xamarin.Android.AVLoadingIndicatorView/).
 
 ### Step 2
 
