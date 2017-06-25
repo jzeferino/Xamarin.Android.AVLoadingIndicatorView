@@ -8,8 +8,10 @@ This is a Xamarin Android Binding for the [AVLoadingIndicatorView](https://githu
 AVLoadingIndicatorView is a collection of nice loading animations for Android.
 
 ## Demo
-![all_loadings](art/all_loadings.gif)
-![loading_detail](art/loading_detail.gif)
+<p align="center">
+<img src="https://github.com/jzeferino/Xamarin.Android.AVLoadingIndicatorView/blob/master/art/all_loadings.gif?raw=true"/>
+<img src="https://github.com/jzeferino/Xamarin.Android.AVLoadingIndicatorView/blob/master/art/loading_detail.gif?raw=true"/>
+</p>
 
 ## Usage
 (see the [sample](https://github.com/jzeferino/Xamarin.Android.AVLoadingIndicatorView/tree/master/src/Xamarin.Android.AVLoadingIndicatorViewBinding.Sample) project for a detailed working example)
