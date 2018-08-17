@@ -1,4 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/kay0t8hupi2ka9k7?svg=true)](https://ci.appveyor.com/project/jzeferino/xamarin-android-avloadingindicatorview)   [![NuGet](https://img.shields.io/nuget/v/Xamarin.Android.AVLoadingIndicatorView.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.Android.AVLoadingIndicatorView/)
+[![Build status](https://ci.appveyor.com/api/projects/status/kay0t8hupi2ka9k7?svg=true)](https://ci.appveyor.com/project/jzeferino/xamarin-android-avloadingindicatorview)
+[![NuGet](https://img.shields.io/nuget/v/Xamarin.Android.AVLoadingIndicatorView.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.Android.AVLoadingIndicatorView/)
 
 Xamarin.Android.AVLoadingIndicatorView
 ===================
@@ -45,17 +46,17 @@ Advanced Loading
 ```xml
 <com.wang.avi.AVLoadingIndicatorView
     android:id="@+id/avi"
-    android:layout_width="wrap_content"  //or your custom size
-    android:layout_height="wrap_content"  //or your custom size
-    style="@style/AVLoadingIndicatorView"// or AVLoadingIndicatorView.Large or AVLoadingIndicatorView.Small
-    android:visibility="visible"  //visible or gone
-    app:indicatorName="BallPulseIndicator"//Indicator Name
-    app:indicatorColor="your color" />
+    android:layout_width="wrap_content"     // or your custom size
+    android:layout_height="wrap_content"    // or your custom size
+    style="@style/AVLoadingIndicatorView"   // or AVLoadingIndicatorView.Large or AVLoadingIndicatorView.Small
+    android:visibility="visible"            // visibility
+    app:indicatorName="BallPulseIndicator"  // indicator Name
+    app:indicatorColor="your color" />      // indicator color
 ```
 
 ### Step 3
 
-Show or hide the progress. (start showing by default)
+Show or hide the progress. (starts showing by default)
 ```c#
 
 protected override void OnCreate(Bundle savedInstanceState)
@@ -93,7 +94,7 @@ protected override void OnCreate(Bundle savedInstanceState)
 ```
 ## Proguard
 
-When using proguard need add rules:
+When using proguard need to add this rules:
 
 ```
 -keep class com.wang.avi.** { *; }
