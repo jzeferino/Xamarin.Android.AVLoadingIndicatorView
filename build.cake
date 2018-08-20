@@ -1,4 +1,4 @@
-#addin Cake.SemVer
+#addin nuget:?package=Cake.SemVer&loaddependencies=true
 
 // Enviroment
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
@@ -27,7 +27,7 @@ Task("Clean")
 	{	
 		CleanDirectory(artifactsDirectory);
 
-		DotNetBuild(solutionFile, settings => settings
+		MSBuild(solutionFile, settings => settings
 				.SetConfiguration(configuration)
 				.WithTarget("Clean")
 				.SetVerbosity(Verbosity.Minimal));
@@ -44,7 +44,7 @@ Task("Build")
 	.IsDependentOn("Restore")
 	.Does(() =>  
 	{	
-		DotNetBuild(solutionFile, settings => settings
+		MSBuild(solutionFile, settings => settings
 					.SetConfiguration(configuration)
 					.WithTarget("Build")
 					.SetVerbosity(Verbosity.Minimal));
