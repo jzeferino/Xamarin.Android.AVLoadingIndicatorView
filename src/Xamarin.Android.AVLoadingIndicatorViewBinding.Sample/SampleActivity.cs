@@ -4,6 +4,7 @@ using Com.Wang.Avi;
 using Android.Views;
 using Android.Support.V7.Widget;
 using Android.Content;
+using Android.Widget;
 
 namespace Xamarin.Android.AVLoadingIndicatorViewBinding.Sample
 {
@@ -77,6 +78,7 @@ namespace Xamarin.Android.AVLoadingIndicatorViewBinding.Sample
                 var indicator = _indicators[position];
                 var vh = holder as IndicatorHolder;
                 vh.IndicatorView.SetIndicator(indicator);
+                vh.Label.Text = indicator;
                 vh.ItemView.SetOnClickListener(new ClickListenerImplementation(indicator));
             }
 
@@ -103,10 +105,12 @@ namespace Xamarin.Android.AVLoadingIndicatorViewBinding.Sample
         public class IndicatorHolder : RecyclerView.ViewHolder
         {
             public AVLoadingIndicatorView IndicatorView { get; private set; }
+            public TextView Label { get; private set; }
 
             public IndicatorHolder(View itemView) : base(itemView)
             {
                 IndicatorView = itemView.FindViewById<AVLoadingIndicatorView>(Resource.Id.indicator);
+                Label = itemView.FindViewById<TextView>(Resource.Id.txtText);
             }
         }
     }
